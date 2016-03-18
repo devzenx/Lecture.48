@@ -46,6 +46,5 @@ class Character {
         
         return true
     }
-    
-    func
+
 }
