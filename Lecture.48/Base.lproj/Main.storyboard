@@ -20,6 +20,17 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="09Q-yV-5W0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB5-L1-ev2">
+                                <rect key="frame" x="450" y="412" width="119" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="AUh-ct-Qn3"/>
+                                    <constraint firstAttribute="width" constant="119" id="ewm-09-bkO"/>
+                                </constraints>
+                                <state key="normal" image="chest"/>
+                                <connections>
+                                    <action selector="onChestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xbb-DS-MLt"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="pAU-cO-Lb9">
                                 <rect key="frame" x="332" y="531" width="333" height="71"/>
                                 <constraints>
@@ -45,13 +56,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="164" id="JFu-PM-Pdr"/>
                                     <constraint firstAttribute="height" constant="180" id="Xku-Gk-RMb"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chest" translatesAutoresizingMaskIntoConstraints="NO" id="za3-mA-W12">
-                                <rect key="frame" x="446" y="411" width="134" height="126"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="126" id="dNo-c9-wqf"/>
-                                    <constraint firstAttribute="width" constant="134" id="hkO-GL-hSH"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enem1" translatesAutoresizingMaskIntoConstraints="NO" id="VSi-ov-UZS">
@@ -127,12 +131,12 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VSi-ov-UZS" secondAttribute="bottom" constant="50" id="a3F-jk-4Gv"/>
                             <constraint firstAttribute="bottom" secondItem="pAU-cO-Lb9" secondAttribute="bottom" constant="-2" id="bcW-kV-0SI"/>
                             <constraint firstAttribute="trailing" secondItem="VSi-ov-UZS" secondAttribute="trailing" constant="14" id="bxt-li-dyu"/>
-                            <constraint firstAttribute="trailing" secondItem="za3-mA-W12" secondAttribute="trailing" constant="20" id="cPG-Ae-LnN"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="za3-mA-W12" secondAttribute="bottom" constant="63" id="ce8-8A-hby"/>
                             <constraint firstItem="wi6-zl-KrN" firstAttribute="centerY" secondItem="WBc-WW-x3b" secondAttribute="centerY" id="dlW-dm-hOV"/>
+                            <constraint firstItem="pAU-cO-Lb9" firstAttribute="top" secondItem="LB5-L1-ev2" secondAttribute="bottom" constant="1" id="dyY-AK-HE1"/>
                             <constraint firstItem="09Q-yV-5W0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eiM-dH-cfY"/>
                             <constraint firstItem="pAU-cO-Lb9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ki7-9D-kYL"/>
                             <constraint firstItem="09Q-yV-5W0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mnn-gV-N9c"/>
+                            <constraint firstAttribute="trailing" secondItem="LB5-L1-ev2" secondAttribute="trailing" constant="31" id="oYR-L4-SDh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pAU-cO-Lb9" secondAttribute="bottom" id="rA2-tm-LCs"/>
                             <constraint firstItem="BJd-61-QsO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="sP5-Gh-tzu"/>
                             <constraint firstItem="N0U-5B-TTa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vlk-gn-hOr"/>
@@ -146,6 +150,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="chestBtn" destination="LB5-L1-ev2" id="MN9-MT-Nkn"/>
+                        <outlet property="enemyHpLbl" destination="7f0-ph-7Oi" id="8v4-Oj-05D"/>
+                        <outlet property="enemyImg" destination="VSi-ov-UZS" id="Keq-kL-4Ao"/>
+                        <outlet property="playerHpLbl" destination="zxB-eo-lkX" id="31Z-wo-QZF"/>
+                        <outlet property="printLbl" destination="wi6-zl-KrN" id="Rno-as-6om"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
