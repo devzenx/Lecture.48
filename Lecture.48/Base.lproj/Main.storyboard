@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="09Q-yV-5W0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB5-L1-ev2">
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LB5-L1-ev2">
                                 <rect key="frame" x="450" y="412" width="119" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="AUh-ct-Qn3"/>
@@ -67,7 +67,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="164" id="tQR-CW-70g"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player attacked wild Kimara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-zl-KrN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the attack button to attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-zl-KrN">
                                 <rect key="frame" x="118" y="31" width="363" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Mgp-eb-NhY"/>
@@ -112,8 +112,12 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZU-lE-q2s">
-                                <rect key="frame" x="212" y="146" width="176" height="156"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZU-lE-q2s">
+                                <rect key="frame" x="491" y="463" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Rnv-vM-C3I"/>
+                                    <constraint firstAttribute="height" constant="95" id="tqZ-Il-U7x"/>
+                                </constraints>
                                 <state key="normal" image="attack"/>
                                 <connections>
                                     <action selector="attackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQy-wv-Tv7"/>
@@ -141,6 +145,7 @@
                             <constraint firstItem="wi6-zl-KrN" firstAttribute="centerY" secondItem="WBc-WW-x3b" secondAttribute="centerY" id="dlW-dm-hOV"/>
                             <constraint firstItem="pAU-cO-Lb9" firstAttribute="top" secondItem="LB5-L1-ev2" secondAttribute="bottom" constant="1" id="dyY-AK-HE1"/>
                             <constraint firstItem="09Q-yV-5W0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eiM-dH-cfY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZZU-lE-q2s" secondAttribute="bottom" constant="42" id="kUs-Q2-A4h"/>
                             <constraint firstItem="pAU-cO-Lb9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ki7-9D-kYL"/>
                             <constraint firstItem="09Q-yV-5W0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mnn-gV-N9c"/>
                             <constraint firstAttribute="trailing" secondItem="LB5-L1-ev2" secondAttribute="trailing" constant="31" id="oYR-L4-SDh"/>
@@ -148,6 +153,7 @@
                             <constraint firstItem="BJd-61-QsO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="14" id="sP5-Gh-tzu"/>
                             <constraint firstItem="N0U-5B-TTa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vlk-gn-hOr"/>
                             <constraint firstItem="pAU-cO-Lb9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="332" id="zAk-aE-oIw"/>
+                            <constraint firstAttribute="trailing" secondItem="ZZU-lE-q2s" secondAttribute="trailing" constant="14" id="zZc-DA-pvu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
